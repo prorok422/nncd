@@ -1,0 +1,278 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  &:before, &:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+*::-webkit-input-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+*:-moz-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+*::-moz-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+*:-ms-input-placeholder
+  opacity: 0.6
+  color: #bfbfbf
+  font-size: 17px
+  font-weight: 400
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+  color: #666
+body input:required:valid,
+body textarea:required:valid
+  color: #666
+
+html, body
+  height: 100%
+
+body
+  font-size: 16px
+  min-width: 320px
+  position: relative
+  line-height: 1.65
+  background-color: $default-color
+  font-family: $default-font
+
+
+.img-responsive
+  display: block
+  max-width: 100%
+  height: auto
+
+.text-center
+  text-align: center
+
+.fa, .far, .fas
+  margin-right: 3px
+// custom
+ul
+  //padding: 0
+  margin: 0
+  list-style-type: none
+
+.load__more
+  width: 100%
+  height: 50px
+  margin: 50px 0
+  text-align: center
+  font-size: 28px
+  position: relative
+  &:after, &:before
+    content: ''
+    width: calc(50% - 110px)
+    border-bottom: solid 2px $default-color
+    position: absolute
+    left: 0
+    top: 50%
+    z-index: 1
+  &:before
+    left: auto
+    right: 0
+  a
+    margin: 0 auto
+    text-align: center
+    display: inline-block
+    color: $grey-light
+    font-size: 17px
+    font-weight: 400
+    line-height: 30px
+    border: 2px solid $default-color
+    background-color: #ffffff
+    z-index: 3
+    padding: 0px 18px
+    position: relative
+    color: $grey-light
+    font-size: 17px
+    font-weight: 400
+    line-height: 30px
+
+.wrapper
+  padding-bottom: 156px
+  .bg
+    height: 400px
+    background-size: cover
+    background: url("../img/featured-post.jpg") center center / cover no-repeat
+  .text__title
+    color: $grey
+    font-size: 30px
+    font-weight: 400
+    line-height: 30px
+    border-bottom: 1px solid $default-color
+    width: 100%
+    padding-bottom: 9px
+    font-family: $stagBold
+    margin-bottom: 3px
+    padding-top: 5px
+    &.leave
+      border-bottom: none
+      color: $grey
+      font-weight: 500
+      margin-top: 22px
+      margin-bottom: 30px
+  .text__info
+    &#cancel
+      cursor: pointer
+    color: $grey-light
+    font-size: $stagMedium
+    font-size: 15px
+    font-weight: 500
+    line-height: 20px
+    &:disabled
+      display: none
+  .content
+    width: 940px
+    margin: -80px auto 0
+    padding: 40px 80px 60px
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05)
+    background-color: #ffffff
+    header
+      display: flex
+      margin-left: -80px
+      .icon
+        width: 32px
+        height: 32px
+        margin: 4px 24px 0
+        img
+          width: 100%
+          height: 100%
+      .text__wrapper
+        width: calc(100% - 80px)
+    article
+      p
+        text-align: justify
+        color: $grey
+        font-size: 17px
+        font-weight: 400
+        line-height: 25px
+        margin-top: 8px
+        margin-bottom: 25px
+      figure
+        img
+          float: left
+          margin-left: -80px
+          display: inline-block
+          margin-right: 25px
+          margin-top: 5px
+    footer
+      display: flex
+      justify-content: space-between
+      padding-right: 220px
+      padding-top: 19px
+      padding-bottom: 19px
+      border-bottom: 1px solid $default-color
+      border-top: 1px solid $default-color
+    .comments__wrapper
+      .comments
+        display: block
+        .parentWrapper
+          margin-bottom: 40px
+        &-new
+          margin-bottom: 50px
+          display: flex
+        li.user
+          margin-bottom: 20px
+          margin-top: 20px
+
+        .user
+            display: flex
+            padding: 0
+        .avatar
+          border: 2px solid #ebedee
+          margin-right: 23px
+          display: inline-table
+          img
+            border-radius: 5px
+            width: 80px
+            background-color: #ffffff
+            margin: 2px
+          &-small
+            img
+              width: 60px
+        .form
+          &__wrapper
+            width: 100%
+            max-width: calc(100% - 115px)
+          &__title
+            display: flex
+            font-family: $stagMedium
+            > div
+              padding-right: 10px
+            &-name
+              color: $grey
+              font-size: 17px
+              font-weight: 500
+              line-height: 18px
+              padding-right: 10px
+          &__reply
+            color: $grey-light
+            font-size: 15px
+            font-weight: 400
+            line-height: 20px
+            &__info
+            display: flex
+          &__content
+            margin-top: 6px
+            margin-bottom: 6px
+          &__btn
+            button
+              background: none
+              border: none
+              margin-right: 6px
+              color: $grey-light
+              padding: 0
+              i
+                margin-right: 5px
+        .form__wrapper
+            display: flex
+            flex-direction: column
+            .top__info
+              position: relative
+              height: 34px
+              .text__info
+                position: absolute
+                right: 0
+                top: 0
+            &#reply-block
+              float: right
+              margin-top: 15px
+              //margin-bottom: -25px
+            textarea
+              height: 86px
+              resize: none
+              padding: 5px
+              border: 2px solid #ebedee
+              background-color: #ffffff
+              border-radius: 5px
+            button:not(.text__info)
+              padding: 10px 50px
+              align-self: flex-end
+              background-color: #f1c40f
+              border: none
+              border-radius: 5px
+              margin-top: 10px
+              margin-bottom: 10px
+              font-family: $stagMedium
+        &-new
+          border-bottom: 2px solid $default-color
+
+@import "media"
